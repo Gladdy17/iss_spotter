@@ -20,4 +20,11 @@ const fetchMyIP = function(callback) {
   });
 };
 
-module.exports = { fetchMyIP };
+const fetchCoordsByIP = function(ip, callback) {
+
+  console.log(`Fetching coordinates for IP: ${ip}`);
+
+  callback(null, { latitude: 40.7128, longitude: -74.0060 }); // Example coordinates
+}
+
+module.exports = { fetchMyIP, fetchCoordsByIP };
